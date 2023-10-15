@@ -1,13 +1,13 @@
-const staticPaths = new Set([]);
+const staticPaths = new Set(["/home/","/home/favicon.svg","/home/manifest.json","/home/q-manifest.json","/home/robots.txt","/home/service-worker.js","/home/sitemap.xml"]);
 function isStaticPath(method, url) {
   if (method.toUpperCase() !== 'GET') {
     return false;
   }
   const p = url.pathname;
-  if (p.startsWith("/build/")) {
+  if (p.startsWith("/home/build/")) {
     return true;
   }
-  if (p.startsWith("/assets/")) {
+  if (p.startsWith("/home/assets/")) {
     return true;
   }
   if (staticPaths.has(p)) {
