@@ -53,6 +53,19 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 3px;
+}
+.bottom {
+  flex-direction: row;
+}
+
+@media (max-width: 1499px) {
+  .bottom {
+    flex-direction: column;
+  }
+  form {
+    width: 100%;
+  }
 }
 button {
   height: 45px;
@@ -93,14 +106,22 @@ a:hover {
 }
 
 form {
+  height: 45px;
   display: flex;
-  justify-content: center;
-  align-items: stretch;
+  /* justify-content: stretch; */
+  /* align-items: stretch; */
   gap: 3px;
+}
+form button {
+  flex: 1;
+  height: 100%;
+  padding: 0 11px;
 }
 input {
   color: rgba(var(--fgr), 1);
   padding: 10px;
+  /* height: 100%; */
+  flex: 4;
   /* padding: 10px 15px; */
   font-size: 18px;
   line-height: 18px;

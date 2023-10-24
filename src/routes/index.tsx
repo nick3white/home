@@ -118,7 +118,7 @@ const allLinks = [
 const searches = [
   ["https://www.google.com/search", "google"],
   ["https://www.startpage.com/sp/search?query=", "startpage"],
-  ["https://www.wikipedia.org/search-redirect.php", "wikipedia"],
+  ["https://en.wikipedia.org/wiki/", "wikipedia"],
 ];
 export default component$(() => {
   return (
