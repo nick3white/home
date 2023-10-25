@@ -59,6 +59,8 @@ const allLinks = [
       },
       { url: "https://netflixcodes.me/", text: "netflix genre codes" },
       { url: "https://www.netflix.com/", text: "netflix" },
+      { url: "https://www.youtube.com", text: "youtube" },
+      { url: "https://nebula.tv/", text: "nebula" },
     ],
   },
   {
