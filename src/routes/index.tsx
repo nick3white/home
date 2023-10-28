@@ -120,7 +120,7 @@ const allLinks = [
 const searches = [
   ["https://www.google.com/search", "google"],
   ["https://www.startpage.com/sp/search?query=", "startpage"],
-  ["https://en.wikipedia.org/wiki/", "wikipedia"],
+  ["https://en.wikipedia.org/w/index.php", "wikipedia"],
 ];
 export default component$(() => {
   return (

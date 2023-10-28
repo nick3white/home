@@ -7,7 +7,7 @@ export interface SearchProps {
 export const Search = component$<SearchProps>(({ search }) => {
   return (
     <form action={search[0]} method="get">
-      <input name="q" />
+      <input name="search" />
       <button type="submit">{search[1]}</button>
     </form>
   );
