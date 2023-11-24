@@ -33,6 +33,8 @@ const allLinks = [
       },
       { url: "https://www.nytimes.com/", text: "ny times" },
       { url: "https://old.reddit.com/r/all", text: "reddit" },
+      { url: "https://www.ibroadcast.com/home/", text: "iBroadcast" },
+      { url: "https://web.telegram.org/k/", text: "telegram" },
     ],
   },
   {
@@ -41,6 +43,7 @@ const allLinks = [
       { url: "https://www.gmail.com", text: "gmail" },
       { url: "https://mail.yahoo.com", text: "yahoo mail" },
       { url: "https://www.hotmail.com", text: "hotmail" },
+      { url: "https://mail.proton.me/u/0/inbox", text: "protonmail" },
       { url: "https://mail.aol.com/webmail-std/en-us/suite", text: "aol" },
       {
         url: "https://outlook.com/owa/chipublib.onmicrosoft.com",
@@ -64,7 +67,7 @@ const allLinks = [
     ],
   },
   {
-    title: "bittorrent",
+    title: "music",
     links: [
       { url: "https://speed.click/", text: "speed.cd" },
       // { url: 'https://tvchaosuk.com/', text: 'tvchaosuk' },
