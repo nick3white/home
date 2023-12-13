@@ -108,17 +108,26 @@ const allLinks = [
     ],
   },
   {
-    title: "reading",
+    title: "LLMs",
     links: [
-      { url: "https://www.tomshardware.com/", text: "toms hardware" },
-      { url: "https://www.anandtech.com", text: "anand tech" },
-      { url: "https://www.engadget.com", text: "engadget" },
-      { url: "https://www.theverge.com", text: "the verge" },
-      { url: "https://www.arstechnica.com", text: "ars technica" },
-      // { url: 'https://www.4chan.org/g/', text: '/g/' },
-      // { url: 'https://www.4chan.org/lit/', text: '/lit/' }
+      { url: "https://chat.openai.com/", text: "Chat GPT" },
+      { url: "https://bard.google.com/", text: "Bard" },
+      { url: "https://poe.com/", text: "Poe" },
+      { url: "https://www.perplexity.ai/", text: "Perplexity" },
     ],
   },
+  // {
+  //   title: "reading",
+  //   links: [
+  //     { url: "https://www.tomshardware.com/", text: "toms hardware" },
+  //     { url: "https://www.anandtech.com", text: "anand tech" },
+  //     { url: "https://www.engadget.com", text: "engadget" },
+  //     { url: "https://www.theverge.com", text: "the verge" },
+  //     { url: "https://www.arstechnica.com", text: "ars technica" },
+      // { url: 'https://www.4chan.org/g/', text: '/g/' },
+      // { url: 'https://www.4chan.org/lit/', text: '/lit/' }
+    // ],
+  // },
 ];
 const searches = [
   ["https://www.google.com/search", "google"],
