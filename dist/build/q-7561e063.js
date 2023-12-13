@@ -1,1 +1,0 @@
-import{C as l,S as u}from"./q-68744b12.js";const r=n=>l("form",null,{action:u(t=>t.search[0],[n]),method:"get"},[l("input",null,{name:"search"},null,3,null),l("button",null,{type:"submit"},u(t=>t.search[1],[n]),3,null)],3,"id_0");export{r as s_RQjhsJ90NAg};
