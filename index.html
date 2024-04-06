@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home star ru</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head> 
+  <body>
+    <main>
+      <section><dl id="lists"></dl></section>
+      <section id="searches"></section>
+    </main>
+  </body>
+  <script>
+
+  const allLinks = [
+    {
+      title: "work",
+      links: [
+        {
+          url: "https://outlook.office365.com/owa/?path=/mail/inbox",
+          text: "work email",
+        },
+        {
+          url: "https://outlook.office365.com/owa/?realm=chipublib.org&exsvurl=1&ll-cc=1033&modurl=1&path=/calendar/view/Month",
+          text: "calendar",
+        },
+        {
+          url: "https://app.slack.com/client/TVBFX6D3M/G010TM01NHJ",
+          text: "slack",
+        },
+        { url: "https://li79-147.members.linode.com:2083/", text: "cpanel" },
+        { url: "https://li79-147.members.linode.com:2087/", text: "whm" },
+      ],
+    },
+    {
+      title: "etc",
+      links: [
+        { url: "https://maps.google.com", text: "g maps" },
+        {
+          url: "https://www.wunderground.com/US/IL/Chicago.html",
+          text: "weather",
+        },
+        { url: "https://www.nytimes.com/", text: "nyt" },
+        { url: "https://old.reddit.com/r/all", text: "reddit" },
+        { url: "https://www.ibroadcast.com/home/", text: "iBroadcast" },
+        { url: "https://web.telegram.org/k/", text: "telegram" },
+      ],
+    },
+    {
+      title: "email",
+      links: [
+        { url: "https://www.gmail.com", text: "gmail" },
+        { url: "https://mail.yahoo.com", text: "yahoo mail" },
+        { url: "https://www.hotmail.com", text: "hotmail" },
+        { url: "https://mail.proton.me/u/0/inbox", text: "protonmail" },
+        { url: "https://mail.aol.com/webmail-std/en-us/suite", text: "aol" },
+        {
+          url: "https://outlook.com/owa/chipublib.onmicrosoft.com",
+          text: "work mail",
+        },
+        { url: "https://www.mail.com/", text: "mail.com" },
+        { url: "https://accounts.autistici.org/sso/login/", text: "autistici" },
+      ],
+    },
+    {
+      title: "television n movies",
+      links: [
+        {
+          url: "https://www.amazon.com/b/ref=lp_2676882011_nav_youraccount_piv?rh=i%3Aprime-instant-video%2Cn%3A2676882011&ie=UTF8&node=2676882011",
+          text: "amazon prime video",
+        },
+        { url: "https://www.netflix.com/", text: "netflix" },
+        { url: "https://www.youtube.com", text: "youtube" },
+        { url: "https://nebula.tv/", text: "nebula" },
+      ],
+    },
+    {
+      title: "music",
+      links: [
+        { url: "https://speed.click/", text: "speed.cd" },
+        // { url: 'https://tvchaosuk.com/', text: 'tvchaosuk' },
+        // { url: 'https://www.tspate.me/', text: 'tspate' },
+        // { url: 'https://www.what.cd', text: 'what.cd RIP' },
+        { url: "https://redacted.ch/index.php", text: "redacted" },
+        { url: "https://www.myanonamouse.net/", text: "myanonamouse" },
+        // { url: 'https://bibliotik.me/', text: 'bibliotik' },
+        { url: "https://www.myspleen.org/", text: "myspleen" },
+        // { url: 'https://animebytes.tv/', text: 'anime bytes' },
+        // { url: 'https://gazellegames.net', text: 'gazelle games' },
+        // { url: 'https://www.cartoonchaos.org/index.php', text: 'cartoon chaos' },
+        // { url: 'https://www.totallykids.tv/index.php?page=torrents', text: 'totally kids' },
+        { url: "https://rutracker.org/forum/index.php", text: "rutracker" },
+      ],
+    },
+    {
+      title: "games",
+      links: [
+        { url: "https://fallout.wikia.com/wiki/Fallout_3", text: "fallout wiki" },
+        { url: "https://www.icy-veins.com/wow/", text: "icy veins" },
+        {
+          url: "https://wiki.guildwars2.com/wiki/Event_timers",
+          text: "gw2 wiki",
+        },
+        { url: "http://gw2timer.com/", text: "gw2 timer" },
+        { url: "https://gw2efficiency.com/", text: "gw2 eff" },
+        {
+          url: "https://metabattle.com/wiki/MetaBattle_Wiki",
+          text: "metabattle",
+        },
+        { url: "https://discretize.eu/builds/", text: "discretize" },
+        {
+          url: "https://gw2mists.com/builds/elementalist",
+          text: "gw2 mists wvw",
+        },
+        { url: "https://www.brainbashers.com/nonogrids.asp", text: "nonograms" },
+      ],
+    },
+    {
+      title: "LLMs",
+      links: [
+        { url: "https://chat.openai.com/", text: "Chat GPT" },
+        { url: "https://bard.google.com/", text: "Bard" },
+        { url: "https://poe.com/", text: "Poe" },
+        { url: "https://www.perplexity.ai/", text: "Perplexity" },
+      ],
+    },
+  ];
+
+  const searches = [
+    ["https://www.google.com/search", "google"],
+    ["https://www.startpage.com/sp/search?query=", "startpage"],
+    ["https://en.wikipedia.org/w/index.php", "wikipedia"],
+  ];
+
+  var searchHtml = document.getElementById('searches')
+
+  searches.forEach(s => {
+    var searchForm = document.createElement('form')
+    var searchInput = document.createElement('input')
+    var searchButton = document.createElement('button')
+
+    searchForm.action = s[0]
+    searchForm.method = "GET"
+
+    searchInput.setAttribute('name' , 'search')
+    searchButton.setAttribute('type', 'submit')
+
+    searchButton.textContent = s[1]
+
+    searchForm.appendChild(searchInput)
+    searchForm.appendChild(searchButton)
+    searchHtml.appendChild(searchForm)
+
+  })
+
+  var listHtml = document.getElementById('lists')
+
+  allLinks.forEach(function(item) {
+    var listWrapper = document.createElement('div')
+    var listTitle = document.createElement('dt')
+    var listItem = document.createElement("dd");
+    var uList = document.createElement('ul')
+
+    listWrapper.id = item.title 
+    listWrapper.classList.add('list-wrapper')
+    listTitle.textContent = item.title
+
+    item.links.forEach(i => {
+      var anchor = document.createElement('a');
+
+      anchor.href = i.url
+      anchor.textContent = i.text
+      
+      listItem.appendChild(anchor)
+    })
+    listWrapper.appendChild(listTitle);
+    listWrapper.appendChild(listItem);
+    listHtml.appendChild(listWrapper)
+  });
+  </script>
+</html>
