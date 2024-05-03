@@ -149,7 +149,7 @@ input, button {
     border: 1px solid #ccc8;
 }
 input {
-  color: #333;
+  color: #ccc;
     padding: 9px;
     flex: 4;
     font-size: 18px;
